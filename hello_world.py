@@ -15,3 +15,13 @@ def launch_request_handler(handler_input):
         SimpleCard("Hello World", speech_text)).set_should_end_session(
         False)
     return handler_input.response_builder.response
+
+@sb.request_handler(can_handle_func=is_intent_name("HelloWorldIntent"))
+def hello_world_intent_handler(handler_input):
+    # type: (HandlerInput) -> Response
+    speech_text = "Hello World!"
+
+    handler_input.response_builder.speak(speech_text).set_card(
+        SimpleCard("Hello World", speech_text)).set_should_end_session(
+        True)
+    return handler_input.response_builder.response
