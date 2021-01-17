@@ -19,7 +19,11 @@
       "distributionCountries": []
     },
     "apis": {
-      "custom": {}
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:sa-east-1:959903454321:function:ask-alex-adventures-default-ski-AlexaSkillFunction-9MKS05MEDDXO"
+        }
+      }
     },
     "manifestVersion": "1.0"
   }
